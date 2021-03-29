@@ -220,9 +220,6 @@ function appendSearchItems(cocktailData, WhereToAppendTheCards) {
                         <ion-card-header>
                             <ion-toolbar>
                                 <Ion-card-title  >${cocktailNumber.strDrink}</Ion-card-title>
-                                <ion-buttons slot="end">
-                                    <ion-icon name="heart-outline" class="heart"></ion-icon>
-                                </ion-buttons>
                             </ion-toolbar>
                         </ion-card-header>   
                     <img id="cocktail-img" src="${cocktailNumber.strDrinkThumb}"></img>
