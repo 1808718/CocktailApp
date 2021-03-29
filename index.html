@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <!--
+        This was created with the help of the Ionic components page: https://ionicframework.com/docs/components 
+        Also stack-overflow was used when an error was encountered, or if the ionic website did not include something
+        This design was created for the iPhone X/XS display size
+    --> 
+
+    <style>
+        .heart {
+        font-size: 25px; 
+    }
+    </style>
+</head>
+
+
+<body>
+
+    <ion-app>
+        <ion-tabs>
+            <ion-tab tab="Home">
+                <ion-header> 
+                    <ion-toolbar color="Medium">
+                        <br>
+                        <ion-title class="padding">Cocktails</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content fullscreen>
+                 
+        
+                <div id="random-cocktail-details"></div>
+        
+                </ion-content>
+        
+            </ion-tab>
+        
+            <ion-tab tab="Cocktails">
+                <ion-header>
+                    <ion-toolbar color="Medium">
+                        <br>
+                        <ion-title class="padding">Search Cocktials</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <br>
+        
+                    
+                    <ion-item>
+                        <ion-Searchbar type="string"  search-icon=“undefined” id="input-cocktail-name" placeholder="Search Cocktails"></ion-Searchbar>
+                        <ion-buttons slot="end" id="btn-get-cocktail"><ion-icon name="search-outline" class="heart" ></ion-icon></ion-buttons>
+                            
+                        </ion-buttons>
+                    </ion-item>
+
+                      
+                      
+        
+                      <div id=cocktail-details></div>
+
+
+                        <div id="cocktail-search-card"></div>
+
+            
+                        
+        
+        
+        
+        
+        
+                    <div id="search-suggestions">
+                      <ion-grid >
+                          <ion-toolbar>
+                              <ion-title>Cocktails</ion-title>
+                          </ion-toolbar>
+                          
+
+                          <div id="AppendCocktailSuggestionsHere"></div>
+        
+
+                   
+                    </ion-grid>
+                </div>
+        
+                </ion-content>
+        
+            </ion-tab>
+        
+            <ion-tab tab="Ingredients">
+                <ion-header>
+                    <ion-toolbar color="Medium">
+                        <br>
+                        <ion-title class="padding">Search Ingredients</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+              <ion-content>
+                  <br>
+        
+                  
+        
+                  <div id="ingredient-search-card"></div>
+              
+                  <div id="AppendCocktailIngredientHere"></div>
+        
+        
+              </ion-content>             
+            </ion-tab>
+        
+            <ion-tab tab="Favourites">
+                <ion-header>
+                    <ion-toolbar color="Medium">
+                        <br>
+                        <ion-title class="padding">Favourites</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content >
+                    
+
+                    <div id="favourites-lst"></div>
+        
+                
+                </ion-content>            
+            </ion-tab>
+        
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button tab="Home">
+                  <ion-label>Home</ion-label>
+                  <ion-icon name="home"></ion-icon>
+                </ion-tab-button>
+                <ion-tab-button tab="Cocktails">
+                  <ion-label>Cocktails</ion-label>
+                  <ion-icon name="wine"></ion-icon>
+                </ion-tab-button>
+                <ion-tab-button tab="Ingredients">
+                  <ion-label>Ingredients</ion-label>
+                  <ion-icon name="restaurant"></ion-icon>
+                </ion-tab-button>
+                <ion-tab-button tab="Favourites">
+                    <ion-label>Favourites</ion-label>
+                    <ion-icon name="heart"></ion-icon>
+                  </ion-tab-button> 
+
+        
+
+       
+    </ion-app>
+    <script src="App.js"></script>
+</body>
+
+</html>
+
