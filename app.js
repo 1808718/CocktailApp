@@ -65,7 +65,6 @@ function getIngredient(i){
 cocktailObject = cocktailIngredients[i];
 let correctCocktailIngredient = cocktailObject.strIngredient1;
 RemoveSpaces(correctCocktailIngredient);
-console.log(IngredientsWithoutSpace);
 let IngredientsForRealThisTime = IngredientsWithoutSpace
  // getIngredientInput();
 let ingredients = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${IngredientsWithoutSpace}`;
@@ -225,23 +224,6 @@ function appendSearchItems(cocktailData, WhereToAppendTheCards) {
                                     <ion-icon name="heart-outline" class="heart"></ion-icon>
                                 </ion-buttons>
                             </ion-toolbar>
-
-                            <ion-grid>
-                                <ion-row>
-                                    <ion-col>
-                                        <ion-card-subtitle>Gin</ion-card-subtitle>
-                                    </ion-col>
-                                    <ion-col>
-                                        <ion-card-subtitle>Salt</ion-card-subtitle>
-                                    </ion-col>
-                                    <ion-col>
-                                        <ion-card-subtitle>Lemon</ion-card-subtitle>
-                                    </ion-col>
-                                    <ion-col>
-                                        <ion-card-subtitle>salt</ion-card-subtitle>
-                                    </ion-col>
-                                </ion-row>
-                            </ion-grid>
                         </ion-card-header>   
                     <img id="cocktail-img" src="${cocktailNumber.strDrinkThumb}"></img>
                     </ion-card>
@@ -255,7 +237,6 @@ function appendSearchItems(cocktailData, WhereToAppendTheCards) {
       }
       length++;
       }
-      console.log(WhereToAppendTheCards);
     }
 
 
@@ -299,12 +280,8 @@ function showCocktailSearchResultDetails(jsonObj){
   let cocktailObjects = cocktailObjectArray.drinks;
   let cocktailInfo = cocktailObjects[0];
 
-  console.log("here is the currentTeb");
-  console.log(currentTab);
   if (currentTab === ""){
     currentTab = ingredientSearchCard;
-    console.log("done");
-    console.log("currentTab");
   }
   RemoveCocktails();
   IDForTheDetailsPage = "SearchCocktailDetailsPage";
@@ -324,7 +301,6 @@ function RemoveCocktails(){
 //-------------------------GENERATING THE DETAILS PAGE------------------------------------------
 
 function GenerateDetails(cocktailInfo, DetailsID, AppendID, ingredientID, measurementID){
-  console.log(AppendID);
   let cocktailToAddToFavourites = cocktailInfo;
   const details = document.createElement('div');
   details.setAttribute("id", "DetailsPageID");
@@ -493,10 +469,7 @@ function getCocktailInput(){
 }
 
 function RemoveSpaces(withSpaces){
-  console.log(withSpaces.replace(/ /g, '_'));
-  let withoutSpaces = withSpaces.replace(/ /g, '_');
   IngredientsWithoutSpace = withSpaces.replace(/ /g, '_');
-  return withoutSpaces;
  }
 
  
